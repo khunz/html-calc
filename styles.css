@@ -1,29 +1,40 @@
 /* Variables */
 :root {
-  --button-size: 3.5rem;
-  --keypad-color: rgb(211, 211, 211);
-  --screen-color: rgba(99, 255, 242, 0.69);
-  --gap: 0.5rem;
+  --button-size: 5rem;
+  --gap: 1px;
+
+  --keypad-color: rgb(123, 123, 123);
+  --operation-color: rgb(97, 97, 97);
+  --screen-color: rgb(80, 80, 80);
+  --equals-color: rgb(255, 149, 29);
+  --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --button-font-size: 2rem;
+  --font-color: rgb(232, 232, 232);
 }
 
 body {
   background-color: rgb(34, 34, 34);
+
   min-height: 100vh;
   min-width: 100vw;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-family: var(--font);
 }
 
 .frame {
-  /* width: 300px;
-  height: 400px; */
-  background-color: rgb(135, 135, 135);
+  background-color: var(--screen-color);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .screen {
@@ -42,16 +53,41 @@ body {
 .r1,
 .r2,
 .r3,
-.r4 {
+.r4,
+.r5 {
   display: flex;
   gap: var(--gap);
 }
 
 button {
   background-color: var(--keypad-color);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
+
+  font-size: var(--button-font-size);
+  font-family: var(--font);
+  color: var(--font-color);
+
   width: var(--button-size);
   height: var(--button-size);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+}
+
+.operation {
+  background-color: var(--operation-color);
+}
+
+#equals {
+  background-color: var(--equals-color);
+}
+
+#num0 {
+  width: calc(var(--button-size) * 2 + var(--gap));
+}
+
+#clear {
+  font-size: calc(var(--button-font-size) * 0.8);
 }
