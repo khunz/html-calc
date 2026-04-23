@@ -1,18 +1,57 @@
+/* Variables */
+:root {
+  --button-size: 3.5rem;
+  --keypad-color: rgb(211, 211, 211);
+  --screen-color: rgba(99, 255, 242, 0.69);
+  --gap: 0.5rem;
+}
+
 body {
   background-color: rgb(34, 34, 34);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .frame {
-  width: 300px;
-  height: 400px;
-  background-color: rgb(255, 255, 255);
+  /* width: 300px;
+  height: 400px; */
+  background-color: rgb(135, 135, 135);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.screen {
+  height: var(--button-size);
+  width: 100%;
+  background-color: var(--screen-color);
+  margin-bottom: var(--gap);
+}
+
+.keypad {
+  gap: var(--gap);
+  display: flex;
+  flex-direction: column;
+}
+
+.r1,
+.r2,
+.r3,
+.r4 {
+  display: flex;
+  gap: var(--gap);
 }
 
 button {
-  background-color: lightgray;
+  background-color: var(--keypad-color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
-  font-style: bold;
-  width: 4rem;
-  height: 4rem;
+  font-weight: bold;
+  width: var(--button-size);
+  height: var(--button-size);
 }
