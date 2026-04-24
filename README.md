@@ -2,6 +2,8 @@
 
 A clean, iOS-inspired calculator built with vanilla HTML, CSS, and JavaScript.
 
+Built as part of the Odin Project's [Foundations Course](https://www.theodinproject.com/lessons/foundations-calculator).
+
 🔗 **[Live Demo](https://khunz.github.io/html-calc/)**
 
 <img src="screenshot.png" width="300" alt="Calculator Screenshot">
