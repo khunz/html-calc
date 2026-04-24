@@ -16,7 +16,9 @@ body {
   background-color: rgb(34, 34, 34);
 
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
 
   display: flex;
   align-items: center;
@@ -40,8 +42,19 @@ body {
 .screen {
   height: var(--button-size);
   width: 100%;
-  background-color: var(--screen-color);
   margin-bottom: var(--gap);
+  padding-right: 2rem;
+
+  background-color: var(--screen-color);
+
+  font-family: var(--font);
+  color: var(--font-color);
+  font-size: calc(var(--button-font-size) * 1.6);
+  text-align: right;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .keypad {
@@ -76,12 +89,20 @@ button {
   border: none;
 }
 
+button:active {
+  background-color: color-mix(in srgb, var(--keypad-color) 85%, black);
+}
+
 .operation {
   background-color: var(--operation-color);
 }
 
 #equals {
   background-color: var(--equals-color);
+}
+
+#equals:active {
+  background-color: color-mix(in srgb, var(--equals-color) 85%, black);
 }
 
 #num0 {

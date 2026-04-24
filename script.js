@@ -22,3 +22,32 @@ function operate(a, b, op) {
       return divide(a, b);
   }
 }
+
+// Creating variable to store screen display
+const screen = document.querySelector(".screen");
+let display = "";
+screen.textContent = display;
+
+// Function to update display on button press
+function update(input) {
+  display += input;
+  screen.textContent = display;
+}
+
+// Function to clear screen
+function clearScreen() {
+  display = "";
+  screen.textContent = display;
+}
+
+// Clear button functionality
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", clearScreen);
+
+// Number button functionality
+const numbers = document.querySelectorAll(".number");
+numbers.forEach((number) => {
+  number.addEventListener("click", (e) => {
+    update(e.target.textContent);
+  });
+});
